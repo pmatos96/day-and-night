@@ -10,6 +10,7 @@
 <body>
     <div id="sky">
         <div id="sun"></div>
+        <div id="moon"></div>
     </div>
 </body>
 <style>
@@ -19,30 +20,33 @@
     }
 
     #sky {
-        background-color: aquamarine;
+        background-color: #79b9b3;
         height: 100vh;
         width: 100vw;
     }
 
     #sun {
-        width: 100px;
-        height: 100px;
+        width: 10vw;
+        height: 10vw;
         border-radius: 50%;
-        background-color: yellow;
+        background-color: #f5da42;
         position: absolute;
-        right: -50px;
+        right: -10vw;
         bottom: 25vh;
-        box-shadow: 0 0 25px #e6e600;
+        box-shadow: 0 0 25px #f5da42;
+    }
+
+    #moon {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        background-color: #bbbbbb;
+        position: absolute;
+        right: -10vw;
+        bottom: 25vh;
+        box-shadow: 0 0 10px white;
     }
 
 </style>
-<script >
-    anime({
-        targets: '#sun',
-        translateX: {value: '-50vw', easing: 'easeInSine'},
-        translateY: {value: '-50vh', easing: 'easeOutSine'},
-        duration: 5000,
-        loop: true
-    })
-</script>
+<script src="index.js"></script>
 </html>
