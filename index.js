@@ -10,14 +10,17 @@ function animateSun(durationOfDay){
 
     anime({
         targets: '#sun',
-        endDelay: durationOfDay,
         translateX: [
-            {value: '-60vw', easing: 'easeInSine', duration: durationOfDay/2},
-            {value: '-110vw', easing: 'easeOutSine', duration: durationOfDay/2}
+            {value: '-63vw', easing: 'easeInSine', duration: durationOfDay/2},
+            {value: '-116vw', easing: 'easeOutSine', duration: durationOfDay/2},
+            {value: '-63vw', easing: 'easeInSine', duration: durationOfDay/2},
+            {value: '0', easing: 'easeOutSine', duration: durationOfDay/2},
         ],
         translateY: [
-            {value: '-50vh', easing: 'easeOutSine', duration: durationOfDay/2},
-            {value: '0', easing: 'easeInSine', duration: durationOfDay/2}
+            {value: '-70vh', easing: 'easeOutSine', duration: durationOfDay/2},
+            {value: '0', easing: 'easeInSine', duration: durationOfDay/2},
+            {value: '100vh', easing: 'easeOutSine', duration: durationOfDay/2},
+            {value: '0', easing: 'easeInSine', duration: durationOfDay/2},
         ],
         scale: [
             {value: [1, 0.75], duration: durationOfDay/2, easing: 'linear'},
@@ -35,15 +38,17 @@ function animateMoon(durationOfNight){
 
     anime({
         targets: '#moon',
-        delay: durationOfNight,
-        endDelay: durationOfNight,
         translateX: [
-            {value: '-60vw', easing: 'easeInSine', duration: durationOfNight/2},
-            {value: '-110vw', easing: 'easeOutSine', duration: durationOfNight/2}
+            {value: '63vw', easing: 'easeInSine', duration: durationOfNight/2},
+            {value: '116vw', easing: 'easeOutSine', duration: durationOfNight/2},
+            {value: '63vw', easing: 'easeInSine', duration: durationOfNight/2},
+            {value: '0vw', easing: 'easeOutSine', duration: durationOfNight/2},
         ],
         translateY: [
-            {value: '-50vh', easing: 'easeOutSine', duration: durationOfNight/2},
-            {value: '0', easing: 'easeInSine', duration: durationOfNight/2}
+            {value: '100vh', easing: 'easeOutSine', duration: durationOfNight/2},
+            {value: '0', easing: 'easeInSine', duration: durationOfNight/2},
+            {value: '-65vh', easing: 'easeOutSine', duration: durationOfNight/2},
+            {value: '0', easing: 'easeInSine', duration: durationOfNight/2},
         ],
         scale: [
             {value: [1, 0.75], duration: durationOfNight/2, easing: 'linear'},
@@ -65,10 +70,10 @@ function animateSky(durationOfDay){
             {value: '#87ceeb', duration: durationOfDay*0.4, easing: 'linear'},
             {value: '#6ca4bc', duration: durationOfDay*0.3, easing: 'linear'},
             {value: '#0d1417', duration: durationOfDay*0.2, easing: 'linear'},
-            {value: '#0d1417', duration: durationOfDay*0.2, easing: 'linear'},
-            {value: '#6ca4bc', duration: durationOfDay*0.3, easing: 'linear'},
-            {value: '#87ceeb', duration: durationOfDay*0.4, easing: 'linear'},
-            {value: '#abdcf1', duration: durationOfDay*0.1, easing: 'linear'},
+            {value: '#0d1417', duration: durationOfDay*0.85, easing: 'linear'},
+            {value: '#6ca4bc', duration: durationOfDay*0.05, easing: 'linear'},
+            {value: '#87ceeb', duration: durationOfDay*0.05, easing: 'linear'},
+            {value: '#79b9b3', duration: durationOfDay*0.05, easing: 'linear'},
         ],
         loop: true
     })
