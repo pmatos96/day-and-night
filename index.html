@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./lib/anime.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Day and Night</title>
 </head>
 <body>
     <div id="sky">
+        <div class="starsContainer"></div>
         <div id="sun"></div>
         <div id="moon"></div>
     </div>
@@ -45,8 +47,23 @@
         right: 103vw;
         bottom: 10vh;
         box-shadow: 0 0 10px white;
+        filter: brightness(2)
     }
 
+    .starsContainer {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+    }
+    .star {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        filter: brightness(2)
+    }
 </style>
 <script src="index.js"></script>
 </html>
